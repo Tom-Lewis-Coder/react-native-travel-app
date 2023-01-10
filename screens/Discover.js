@@ -81,7 +81,7 @@ const Discover = () => {
                 <ScrollView>
                     <View className="flex-row items-center justify-between px-8 mt-6">
                         <MenuContainer
-                            key={"hotel"}
+                            key={"hotels"}
                             title="Hotels"
                             imageSrc={Hotels}
                             type={type}
@@ -140,8 +140,8 @@ const Discover = () => {
                                             source={NotFound}
                                             className="w-32 h-32 object-cover"
                                         />
-                                        <Text className="text-2xl text-[#428288] font-semibold">
-                                            Oops... No data found
+                                        <Text className="text-2xl text-[#428288] font-semibold text-center">
+                                            No data found, please try again
                                         </Text>
                                     </View>
                                 </>

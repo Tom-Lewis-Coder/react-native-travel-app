@@ -68,7 +68,7 @@ const ItemScreen = ({ route }) => {
                     </View>
                 </View>
 
-                <View className="mt-3 flex-row items-center justify-between">
+                <View className="mt-3 flex-row items-center justify-around">
                     {data?.rating && (
                         <View className="flex-row items-center space-x-2">
                             <View className="w-12 h-12 rounded-2xl bg-red-100 items-center justify-center shadow-md">
@@ -92,14 +92,14 @@ const ItemScreen = ({ route }) => {
                             </View>
                         </View>
                     )}
-                    {data?.cuisine && (
+                    {data?.bearing && (
                         <View className="flex-row items-center space-x-2">
                             <View className="w-12 h-12 rounded-2xl bg-red-100 items-center justify-center shadow-md">
-                                <FontAwesome name="globe" size={24} color="#515151" />
+                                <FontAwesome name="compass" size={24} color="#515151" />
                             </View>
                             <View>
-                                <Text className="text-[#515151] ">{data?.cuisine[0]?.name}</Text>
-                                <Text className="text-[#515151] ">Cuisine</Text>
+                                <Text className="text-[#515151] ">Area:</Text>
+                                <Text className="text-[#515151] ">{data?.bearing[0].toUpperCase() + data?.bearing.slice(1)}</Text>
                             </View>
                         </View>
                     )}

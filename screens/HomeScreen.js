@@ -29,7 +29,7 @@ const HomeScreen = () => {
 
             {/* Second Section */}
 
-            <View className="px-6 mt-8 space-y-3">
+            <View className="px-6 mt-6 space-y-3">
                 <Text className="text-[#3C6072] text-[42px]">Enjoy the trip with</Text>
                 <Text className="text-[#00BCC9] text-[38px] font-bold">Good Moments</Text>
 
@@ -41,8 +41,8 @@ const HomeScreen = () => {
 
             {/* Circle Section */}
 
-            <View className="w-[400px] h-[400px] bg-[#00BCC9] rounded-full absolute bottom-36 -right-36"></View>
-            <View className="w-[400px] h-[400px] bg-[#E99265] rounded-full absolute -bottom-28 -left-36"></View>
+            <View className="w-[350px] h-[350px] bg-[#00BCC9] rounded-full absolute bottom-24 -right-36"></View>
+            <View className="w-[350px] h-[350px] bg-[#E99265] rounded-full absolute -bottom-28 -left-36"></View>
 
             {/* Image Container*/}
 
