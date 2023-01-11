@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Image, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, SafeAreaView, Image, ScrollView, TouchableOpacity, Linking } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { FontAwesome, FontAwesome5, MaterialIcons } from '@expo/vector-icons'
@@ -126,15 +126,15 @@ const ItemScreen = ({ route }) => {
                 {data?.phone && (
                     <View className="space-y-2 mt-3 bg-gray-100 rounded-2xl px-4 py-2">
                         <View className="items-center flex-row space-x-6">
-                            <FontAwesome name="phone" size={24} color="#428288" />
-                            <Text className="text-lg">{data?.phone}</Text>
+                            <FontAwesome name="phone" size={24} color="#428288" onPress={() => Linking.openURL(`tel:${data?.phone}`)} />
+                            <Text className="text-lg" >{data?.phone}</Text>
                         </View>
                     </View>
                 )}
                 {data?.email && (
                     <View className="space-y-2 mt-2 bg-gray-100 rounded-2xl px-4 py-2">
                         <View className="items-center flex-row space-x-6">
-                            <FontAwesome name="envelope" size={24} color="#428288" />
+                            <FontAwesome name="envelope" size={24} color="#428288" onPress={() => Linking.openURL(`mailto:${data?.email}`)}/>
                             <Text className="text-lg">{data?.email}</Text>
                         </View>
                     </View>
@@ -142,14 +142,14 @@ const ItemScreen = ({ route }) => {
                 {data?.address && (
                     <View className="space-y-2 mt-2 bg-gray-100 rounded-2xl px-4 py-2">
                         <View className="items-center flex-row space-x-6">
-                            <FontAwesome name="map-pin" size={24} color="#428288" />
+                            <FontAwesome name="map-pin" size={24} color="#428288" onPress={() => Linking.openURL(`https://www.google.com/maps/search/?api=1&query=${data?.address}`)} />
                             <Text className="text-lg">{data?.address}</Text>
                         </View>
                     </View>
                 )}
 
                 <View className="mt-4 px-4 py-2 rounded-lg bg-[#06B2BE] items-center justify-center mb-12">
-                    <Text className="text-2xl uppercase tracking-wider text-gray-100">
+                    <Text className="text-2xl uppercase tracking-wider text-gray-100" onPress={() => Linking.openURL(`${data?.website || data?.phone || data?.email}`)}>
                         Book Now
                     </Text>
                 </View>
