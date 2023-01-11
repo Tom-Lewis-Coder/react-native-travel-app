@@ -149,7 +149,7 @@ const ItemScreen = ({ route }) => {
                 )}
 
                 <View className="mt-4 px-4 py-2 rounded-lg bg-[#06B2BE] items-center justify-center mb-12">
-                    <Text className="text-2xl uppercase tracking-wider text-gray-100" onPress={() => Linking.openURL(`${data?.website || data?.phone || data?.email}`)}>
+                    <Text className="text-2xl uppercase tracking-wider text-gray-100" onPress={() => data?.website ? Linking.openURL(`${data?.website}`) : data?.phone ? Linking.openURL(`tel:${data?.phone}`) : data?.email ? Linking.openURL(`mailto:${data?.email}`) : Linking.openURL(`https://www.google.com/search?q=${data?.name}`)}>
                         Book Now
                     </Text>
                 </View>

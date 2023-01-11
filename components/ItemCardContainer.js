@@ -18,7 +18,7 @@ const ItemCardContainer = ({ imageSrc, title, location, data }) => {
             {title ? (
                 <>
                     <Text className="text-[#428288] text-[18px] font-bold">
-                        {title?.length > 14 ? `${title.slice(0, 14)}..` : title}
+                        {title?.length > 13 ? `${title.slice(0, 13)}..` : title}
                     </Text>
 
                     <View className="flex-row items-center space-x-1">
