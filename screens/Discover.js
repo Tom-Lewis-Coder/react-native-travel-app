@@ -7,6 +7,7 @@ import MenuContainer from '../components/MenuContainer';
 import { FontAwesome } from '@expo/vector-icons';
 import ItemCardContainer from '../components/ItemCardContainer';
 import { getPlacesData } from '../api';
+import { REACT_APP_GOOGLE } from "@env"
 
 const Discover = () => {
 
@@ -66,7 +67,7 @@ const Discover = () => {
                         settr_lng(details?.geometry?.viewport?.northeast?.lng)
                     }}
                     query={{
-                        key: '',
+                        key: REACT_APP_GOOGLE,
                         language: 'en',
                     }}
                 />
