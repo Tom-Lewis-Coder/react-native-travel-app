@@ -3,7 +3,7 @@ import React, { useLayoutEffect } from 'react'
 import * as Animatable from 'react-native-animatable';
 
 import { useNavigation } from '@react-navigation/native'
-import { HeroImage } from '../assets'
+import { HeroImage, NewHero } from '../assets'
 
 const HomeScreen = () => {
 
@@ -30,8 +30,8 @@ const HomeScreen = () => {
             {/* Second Section */}
 
             <View className="px-6 mt-6 space-y-3">
-                <Text className="text-[#3C6072] text-[42px]">Enjoy the trip with</Text>
-                <Text className="text-[#00BCC9] text-[38px] font-bold">Good Moments</Text>
+                <Text className="text-[#3C6072] text-[42px]">Time to explore</Text>
+                <Text className="text-[#00BCC9] text-[38px] font-bold">Let's go!</Text>
 
                 <Text className="text-[#3C6072] text-base">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti odio
@@ -50,8 +50,8 @@ const HomeScreen = () => {
                 <Animatable.Image
                     animation="fadeIn"
                     easing="ease-in-out"
-                    source={HeroImage}
-                    className="w-full h-full object-cover mt-20"
+                    source={NewHero}
+                    className="w-full h-full object-cover mr-14"
                 />
 
                 <TouchableOpacity
