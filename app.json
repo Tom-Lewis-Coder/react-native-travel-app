@@ -2,6 +2,8 @@
   "expo": {
     "name": "react-travel-app",
     "slug": "react-travel-app",
+    "privacy": "public",
+    "description": "An application that finds local restaurants, hotels and attractions.",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

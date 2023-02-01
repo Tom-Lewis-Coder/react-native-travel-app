@@ -25,7 +25,8 @@
     "react-native-screens": "^3.18.2",
     "react-native-web": "~0.18.9",
     "tailwindcss-react-native": "^1.7.10",
-    "expo-constants": "~14.0.2"
+    "expo-constants": "~14.0.2",
+    "expo-updates": "~0.15.6"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
